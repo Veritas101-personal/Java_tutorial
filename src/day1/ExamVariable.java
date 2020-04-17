@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class ExamVariable {
 
-	  // main: ÄÜ¼ÖÀÀ¿ëÇÁ·Î±×·¥ÀÌ ½ÇÇàµÇ±â À§ÇØ ²À ÇÊ¿äÇÑ °Í(¸Ş¼Òµå,±â´É)
+	  // main: ì½˜ì†”ì‘ìš©í”„ë¡œê·¸ë¨ì´ ì‹¤í–‰ë˜ê¸° ìœ„í•´ ê¼­ í•„ìš”í•œ ê²ƒ(ë©”ì†Œë“œ,ê¸°ëŠ¥)
 
 	  public static void main(String[] args) {
-	    // ÄÜ¼Ö¿¡ ¿øÇÏ´Â ¹®ÀÚ¿­À» Ãâ·ÂÇÑ ÈÄ¿¡ ¿£ÅÍ¸¦ Ä¡´Â°Í(¸Ş¼Òµå)
+	    // ì½˜ì†”ì— ì›í•˜ëŠ” ë¬¸ìì—´ì„ ì¶œë ¥í•œ í›„ì— ì—”í„°ë¥¼ ì¹˜ëŠ”ê²ƒ(ë©”ì†Œë“œ)
 	    
 	    System.out.println("Hello world!");
 	    System.out.println(7+7);
 	    System.out.println(""+(7+7));
 	    System.out.println();
-	    System.out.print("¾È³ç\n");
+	    System.out.print("ì•ˆë…•\n");
 	    System.out.println(""+7+7);
 	    int num1 = 10, num2 = 20;
 	    System.out.println(num1 + "," + num2);
