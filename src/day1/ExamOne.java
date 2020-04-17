@@ -8,10 +8,12 @@ public class ExamOne {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("°ªÀ» ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ê°’ì„ ì…ë ¥í•˜ì„¸ìš”.");
 		
 		int a = scan.nextInt();
-		System.out.println(a);
+		
+		System.out.println("ì…ë ¥í•œ ì •ìˆ˜: " + a);
+		
 		
 		scan.close();
 		
