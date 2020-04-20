@@ -27,7 +27,11 @@ public class ForWhileEx1 {
 		for (int i = 1 ; i < 6 ; i++) {
 			System.out.println("Hello world!");
 		}
-		
+		System.out.println("----------------------");
+		for (int i = 0 ; i < 5 ; i++) {
+			System.out.println(i);
+		}
+		System.out.println("----------------------");
 	}
 
 }
