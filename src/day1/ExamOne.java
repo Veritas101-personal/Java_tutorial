@@ -13,7 +13,7 @@ public class ExamOne {
 		int a = scan.nextInt();
 		
 		System.out.println("입력한 정수: " + a);
-		
+		 
 		
 		scan.close();
 		
