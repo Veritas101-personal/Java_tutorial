@@ -1,20 +1,53 @@
 package day5;
 
-public class MethodEx2 {
+import java.util.Scanner;
 
+public class MethodEx2 {
+	
+	public static double Calculate (double num1, double num2, char a) {
+		
+		double result = 0;
+		
+		while (true) {
+			if (a=='+') {
+				result = num1+num2;
+				break;
+			} else if (a=='-') {
+				result = num1-num2;
+			} else if (a=='*') {
+				result = num1*num2;
+				break;
+			} else if (a=='/') {
+				result = num1/num2;
+				break;
+			} else if (a=='%') {
+				result = num1%num2;
+				break;
+			} else {
+			
+			}
+		}
+		return result;
+	}	
+	
+	
 	public static void main(String[] args) {
-		// 생성자 : 멤버변수 초기화
-		// 기본 생성자
-		// public 클래스명() {
-		// 
-		// }
-		// 이름이 같은 메소드나 생성자는 존재할 수 있다. 물론 다음과 같은 조건을 만족해야 하지만.
-		// - 매개변수가 달라지는 경우
-		// 1) 매개변수의 갯수가 달라지는 경우
-		// 2) 매개변수의 타입이 달라지는 경우 int, double 등등...
-		// 이런 걸 오버로딩이라고 한다! @overload
 		
+		Scanner scan = new Scanner(System.in);
 		
+		System.out.println("연산할 두 정수와 연산자를 입력하세요.");
+		double a = scan.nextDouble();
+		double b = scan.nextDouble();
+		char e = scan.next().charAt(0);	
+		System.out.println(Calculate (a,b,e));
+		scan.close();
 	}
 	
+
 }
+/* 기능: 두 정수와 산술연산자가 주어지면 산술연산 결과를 알려주는 메소드
+ * 단 예외 사항은 없다고 가정 (예: 잘못된 연산자가 들어오거나, 0으로 나누는 경우)
+ * 
+ * */
+ 
+ 
