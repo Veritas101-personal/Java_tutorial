@@ -49,6 +49,9 @@ public class ClassEx1 {
 		//DefaultClassEx2.main(null);
 		Point p1 = new Point ();
 		p1.x1 = 10;
+		p1 = new Point(1,2);
+		//p1 = new Point(3,4,5); - 생성자 3개짜리 변수를 안만들어서 불가! 
+		
 		//Point클래스의 x2s는 Point클래스의 x2는 private이기 때문에 다른 클래스에서 사용 불가
 		//p1.p2. = 10;
 		
@@ -70,8 +73,11 @@ class Point {
 		x1 = x2 = x3 = 0; // 의미는 읎다
 		y1 = y2 = y3 = 0; // 이것도 읎다
 	}
+	// 생성자 오버로딩!
 	public Point(int x, int y) { // x,y 지점에서 만드는 걸 선언
 		x1 = x2 = x3 = x;
 		y1 = y2 = y3 = y;
 	}
+	
+	
 }
