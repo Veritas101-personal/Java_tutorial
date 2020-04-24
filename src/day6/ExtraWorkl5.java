@@ -15,10 +15,20 @@ public class ExtraWorkl5 {
 		}
 		*/
 		printArray(arr);
-		
+		System.out.println();
+		printArrayMod(arr);
 	}
 	public static void printArray (int []num1) {
-				
+		for (int tmpa : num1) {
+			System.out.print(tmpa + " ");
+		}
+		
+	}
+	
+	public static void printArrayMod (int []num1) {
+		for (int i = 0 ; i < num1.length ; i++) {
+			num1[i] = i;
+		}
 		for (int tmpa : num1) {
 			System.out.print(tmpa + " ");
 		}
