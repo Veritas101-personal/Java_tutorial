@@ -30,7 +30,7 @@ public class ForEx7 {
 				}
 				
 			}
-		System.out.printf("%d와 %d의 최대 공약수 : %d.",num1,num2,gcd);
+		System.out.printf("%d와 %d의 최대 공약수 : %d\n",num1,num2,gcd);
 				
 	}
 }
