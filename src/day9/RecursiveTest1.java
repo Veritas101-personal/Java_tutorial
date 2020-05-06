@@ -6,7 +6,7 @@ public class RecursiveTest1 {
 		// TODO Auto-generated method stub
 
 		System.out.println(sum(10));
-		System.out.println(sum1(10));
+	
 	}
 
 
@@ -27,12 +27,5 @@ public class RecursiveTest1 {
 		
 	}
 	
-	public static int sum1(int b) {
-		
-		int i = 1;
-		
-		if (i > b) 
-			return 0;
-		return i + sum1(++i);
-	}
+	
 }

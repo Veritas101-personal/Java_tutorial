@@ -58,6 +58,16 @@ public class NumberBaseball {
 		return result;
 		
 	
+	public static int strike(int []com, int [] user) {
+		
+		int cnt = 0;
+		for(int i = 0; i<=com.length; i++) {
+			
+		}
+		
+		
+	}
+		
 	}
 	
 	public static boolean createArray (int min, int max, int n, int []arr) {
