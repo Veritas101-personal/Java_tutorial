@@ -1,14 +1,36 @@
 package studentManageProgram;
 
-class StudentInfo {
+public class StudentInfo {
 	
 	private String name;
 	private int grade;
 	private int section;
-	private int studentNum;
+	private String studentNum;
 	private Subject score[];
 	
+
+
+	public StudentInfo(String name, int grade, int section, String i) {
+		 AddStudent (name,  grade,  section,  i);
+	}
+
+
+	public StudentInfo() {
+		
+	}
+
+
+	public boolean equal(int grade, int section, String studentNum, String name) {
+		if(this.grade !=grade) return false;
+		if(this.section !=section) return false;
+		if(this.studentNum !=studentNum) return false;
+		if(!this.name.equals(name)) return false;
+		
+		return true;
+		
+	}
 	
+
 	public String getName() {
 		return name;
 	}
@@ -39,28 +61,17 @@ class StudentInfo {
 	}
 
 
-	public int getStudentNum() {
+	public String getStudentNum() {
 		return studentNum;
 	}
 
 
-	public void setStudentNum(int studentNum) {
+	public void setStudentNum(String studentNum) {
 		this.studentNum = studentNum;
 	}
 
-
-	public boolean equal(int grade, int section, int studentNum, String name) {
-		if(this.grade !=grade) return false;
-		if(this.section !=section) return false;
-		if(this.studentNum !=studentNum) return false;
-		if(!this.name.equals(name)) return false;
-		
-		return true;
-		
-	}
 	
-	
-	public void AddStudent (String name, int grade, int section, int studentNum) {
+	public void AddStudent (String name, int grade, int section, String studentNum) {
 		
 		this.name = name;
 		this.grade = grade;
@@ -85,5 +96,12 @@ class StudentInfo {
 		for(Subject tmp : score) {
 			tmp.print();
 		}
+	}
+	
+	public void printStuInfo() {
+		System.out.println("이름: " + name);
+		System.out.println("학년: " + grade);
+		System.out.println("반: " + section);
+		System.out.println("번호: " + studentNum);
 	}
 }
