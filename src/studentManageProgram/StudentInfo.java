@@ -23,13 +23,21 @@ public class StudentInfo {
 	public boolean equal(int grade, int section, String studentNum, String name) {
 		if(this.grade !=grade) return false;
 		if(this.section !=section) return false;
-		if(this.studentNum !=studentNum) return false;
+		if(!this.studentNum.equals(studentNum)) return false;
 		if(!this.name.equals(name)) return false;
 		
 		return true;
 		
 	}
 	
+	public boolean equal(StudentInfo stu) {
+		if(this.grade !=stu.grade) return false;
+		if(this.section !=stu.section) return false;
+		if(!this.studentNum.equals(stu.studentNum)) return false;
+		
+		return true;
+		
+	}
 
 	public String getName() {
 		return name;
@@ -82,6 +90,11 @@ public class StudentInfo {
 	}
 	
 	
+	public Subject[] getScore() {
+		return score;
+	}
+
+
 	public static void BasicInfo () {
 		
 	}
@@ -93,15 +106,27 @@ public class StudentInfo {
 		}
 	}
 	public void printScore() {
+		if(score == null) return; // 만약 과목 정보를 입력하지 안았을 경우 그냥 메소드 종료 및 에러 방지
 		for(Subject tmp : score) {
 			tmp.print();
 		}
 	}
-	
-	public void printStuInfo() {
-		System.out.println("이름: " + name);
-		System.out.println("학년: " + grade);
-		System.out.println("반: " + section);
-		System.out.println("번호: " + studentNum);
+
+
+	public void addScore(Subject[] addscore) {
+		int aSize = 0, bSize= 0; // a사이즈는 원래 입력한 과목수. b는 새로 입력할 값들
+		if(score !=null) {aSize = score.length;}
+		if(addscore !=null) {bSize = addscore.length;}
+		
+		Subject []tmp = new Subject[aSize + bSize];
+		for(int i=0; i < aSize ;i++) {
+			tmp[i] = score[i];
+		}
+		for (int j = 0; j < bSize; j++) {
+			tmp[score.length+j] = addscore[j];
+		}
+		score = tmp;
 	}
+	
+	
 }

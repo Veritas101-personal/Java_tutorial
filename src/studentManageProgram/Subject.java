@@ -32,6 +32,15 @@ public class Subject {
 		this.performance = performance;
 		this.attendance = attendance;
 	}
+	
+
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	public int getMidterm() {
 		return midterm;
 	}
@@ -56,6 +65,7 @@ public class Subject {
 	public void setAttendance(int attendance) {
 		this.attendance = attendance;
 	}
+
 
 	
 	
