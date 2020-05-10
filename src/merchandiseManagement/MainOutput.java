@@ -12,20 +12,40 @@ public class MainOutput {
 		
 		while (select!=3) {
 			
-			System.out.println("-----번호 입력-------");
+			System.out.println("------번호 입력-------");
 			System.out.println("1.상품등록");
 			System.out.println("2.등록상품출력");
 			System.out.println("3.프로그램종료");
 			
 			select = scan.nextInt();
 			
-				if(select==1) {
-					Product.AddList();
+				if (select==1) {
+					
+				} else if (select==2) {
+					
+				} else if (select==3 ) {
+					System.out.println("프로그램 종료.");
+				} else {
+					System.out.println("잘못 입력하셨습니다. 다시 입력하세요.");
+					select = scan.nextInt();
 				}
 		}
 		
+	
 	}
 
+	public static void receivingInfo (Scanner scan) {
+		
+		Product stuff = new Product();
+		
+		System.out.print("상품명: ");
+		stuff.setProductName() = scan.next();
+		System.out.print("가격 : ");
+		int price = scan.nextInt();
+	
+		
+	}
+	
 }
 
 /*

@@ -95,10 +95,6 @@ public class StudentInfo {
 	}
 
 
-	public static void BasicInfo () {
-		
-	}
-
 	public void setScore(Subject...score) {
 		this.score = new Subject[score.length];
 		for(int i = 0 ; i < score.length;  i++) {
