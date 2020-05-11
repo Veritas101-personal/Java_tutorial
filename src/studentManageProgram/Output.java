@@ -26,17 +26,6 @@ public class Output {
 		int a = 0;
 	
 		
-		
-		String stuName;
-		int stuGrade;
-		int stuSection;
-		String stuNum;
-		
-		Subject subjectList[];
-		String title;
-		int midterm, finals, performance, attendance;
-		
-		
 		Scanner scan = new Scanner(System.in);
 		
 		while(a!=5) { // while문으로 한 명령이 완료되면 바로 메인 화면으로 복귀. 단, 5가 입력되면 프로그램 종료 그 이외엔 지정된 명령어를 받을 때 까지 반복수행

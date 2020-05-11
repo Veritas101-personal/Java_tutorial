@@ -4,8 +4,7 @@ public class Product {
 
 	private String productName;
 	private int price;
-	private String [] merchant;
-	
+	int proNum = 0;
 	
 	public String getProductName() {
 		return productName;
@@ -20,24 +19,30 @@ public class Product {
 		this.price = price;
 	}
 	
-	public String[] getMerchant() {
-		return merchant;
+	
+	public void print() {
+		
+		++proNum;
+
+		System.out.printf("%d. 상품명 : %s,가격 : %d\n",proNum,productName,price);
+			
 	}
 	
-	public void setMerchant(String[] merchant) {
-		this.merchant = merchant;
-	}
 	
 	public Product (String productName, int price) {
+		addProduct(productName, price);
 		
 	}
-	
+
 	public Product() {
 		
 	}
 	
-	public static void addProduct (Product merchant[]) {
+	public void addProduct (String productName, int price) {
 		
+		this.productName = productName;
+		this.price = price;
 	}
+	
 	
 }

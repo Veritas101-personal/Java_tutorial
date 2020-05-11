@@ -6,6 +6,12 @@ public class MainOutput {
 
 	public static void main(String[] args) {
 		
+		int size = 50;
+		Product []product = new Product[size];
+		
+		int arrNum = 0;
+		
+		
 		Scanner scan = new Scanner(System.in);
 
 		int select = 0;
@@ -21,7 +27,16 @@ public class MainOutput {
 			
 				if (select==1) {
 					
+					Product stuff = receivingInfo(scan);
+				
+					product[arrNum] = stuff;
+					
+					arrNum++;
+					stuff=null;
+					
+					
 				} else if (select==2) {
+					printProduct(product);
 					
 				} else if (select==3 ) {
 					System.out.println("프로그램 종료.");
@@ -34,16 +49,32 @@ public class MainOutput {
 	
 	}
 
-	public static void receivingInfo (Scanner scan) {
+	public static Product receivingInfo (Scanner scan) {
 		
 		Product stuff = new Product();
 		
 		System.out.print("상품명: ");
-		stuff.setProductName() = scan.next();
+		stuff.setProductName(scan.next());
 		System.out.print("가격 : ");
-		int price = scan.nextInt();
-	
+		stuff.setPrice(scan.nextInt());
+
 		
+		return stuff;
+		
+	}
+	
+	public static void printProduct (Product product[]) {
+		if (product==null) {
+			return;
+		} else {
+			for (int cnt = 0 ; cnt < 50 ; cnt++) {
+				for (Product tmp : product) {
+					tmp.print();
+				}
+			}
+		
+			
+		}
 	}
 	
 }
