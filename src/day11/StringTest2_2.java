@@ -13,11 +13,12 @@ public class StringTest2_2 {
 		System.out.print("주민번호를 입력하세요 : ");
 		String peopleNum = scan.nextLine();
 		
-		Pattern p = Pattern.compile("(\\d{6}-\\d{7})|(\\d{13})");
+		
+		Pattern p = Pattern.compile("(\\d{6}-\\d{7})");
 		Matcher m = p.matcher(peopleNum);
 		if(!m.matches()) {
 			System.out.println("올바른 주민번호 형태가 아닙니다.");
-			scan.close();
+		
 			return;
 		}
 		
@@ -30,11 +31,12 @@ public class StringTest2_2 {
 		char gender;
 		
 		if(peopleNum.contains("-")) {
-			gender = peopleNum.charAt(7);
+			gender = peopleNum.charAt(8);
+			
 		} else {
 			gender = peopleNum.charAt(6);
 		}
-		
+	}
 	public static boolean isValid(String birth) {
 		if (birth==null || birth.length()!=6) return false;
 		String sYear = birth.substring(0, 2);

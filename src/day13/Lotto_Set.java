@@ -53,7 +53,7 @@ public class Lotto_Set {
 	
 	public static void result() {
 		lottoNum();
-		contains(lotto, );
+	
 	}
 	
 	static boolean contains (int []arr, int inputNum) {

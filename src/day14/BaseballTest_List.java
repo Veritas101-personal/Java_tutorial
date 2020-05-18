@@ -27,11 +27,12 @@ public class BaseballTest_List {
 			detect();
 		}
 		
+		System.out.println("게임셋!");
 		
 	}
 
 	
-	public static void pitcher () {
+	public static void pitcher () { // 컴퓨터의 랜덤 배열
 		
 		int min = 1, max = 9;
 		int inning = 3;
@@ -48,10 +49,10 @@ public class BaseballTest_List {
 				
 			}
 		}
-		//System.out.println(pitching);  확인용!
+		//System.out.println(pitching); // 확인용!
 	}
 	
-	public static void hitter (Scanner scan) {
+	public static void hitter (Scanner scan) { // 입력값 받는 메소드
 		
 		int min = 1, max = 9;
 		int inning = 3;
@@ -59,12 +60,23 @@ public class BaseballTest_List {
 		hit.clear(); // 이거 안하면 니가 했던거 초기화 안되서 그대로 남는다...
 		
 		System.out.println("1~9까지 번호를 입력하세요.");
-		while (cnt<inning) {
 		
-			int trial = scan.nextInt();
-			if (trial > 9 || trial <= 0) {
+		int trial = 0;
+
+		while (cnt<inning) {
+			try { 
+				
+				trial = scan.nextInt();
+				
+			} catch (NoSuchElementException e) {
+				
+				System.out.println("허용되지 않은 구동입니다. 다시 시도하세요.");
+				break;
+			}
+			
+			if (trial > max || trial < min) {
 				System.out.println("범위를 초과한 값을 입력했습니다. 다시 입력하세요.");
-			} else if (hit.contains(trial)) {
+			} else if (hit.contains(trial)) { // 입력한 수가 이미 배열에 있으면 바로 else if 걸린다!
 				System.out.println("중복된 숫자를 입력했습니다. 다시 입력하세요.");
 			} else {
 				hit.add(trial);
@@ -72,11 +84,13 @@ public class BaseballTest_List {
 			}
 		}
 		
-		System.out.println(hit);
+			System.out.println(hit);
+		}
+			
 		
-	}
 	
-	public static void detect () {
+	
+	public static void detect () { // 확인 단계 및 결과 출력 메소드
 		
 		int ball = 0;
 		strike = 0; // 이거 안하면 스트라이크, 볼 초기화 안된다...
