@@ -10,8 +10,8 @@ public class TransitCalculator {
 	 * 
 	 * 'You should get the Pay-per-Ride option at 2.75 per ride.'
 	 * 
-	 * So here is the my solution, hopefully it would be helpful for student who starts programming. 
-	 * Of course, someone might give a better one. So it's up to you whether you choose this or not.
+	 * So here is my solution. Hopefully it would be helpful for students who start to learn a programming. 
+	 * Of course, someone might give better idea, so it's up to you whether you choose this or not.
 	 * 
 	 */ 
 	
