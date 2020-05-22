@@ -113,7 +113,7 @@ class DataBase {
 	List <Integer> income = new ArrayList<Integer>();
 	List <Integer> spend = new ArrayList<Integer>();
 	
-	public DataBase () {}
+	public DataBase () {} b
 	public DataBase(String history, List<String> date, List<Integer> income, List<Integer> spend) {
 		super();
 		this.history = history;
